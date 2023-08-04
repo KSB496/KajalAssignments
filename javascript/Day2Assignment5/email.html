@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script language="JavaScript">
+        function email() {
+           email = 'Ro.bert@yahoo.com'
+           k=0;
+           d=0;
+           v1 = email.indexOf('@')
+           v2 = email.lastIndexOf('@')
+           v3 = email.indexOf('.')
+           v4 = email.lastIndexOf('.')
+           if(v1==v2){
+            document.write('@ has only one occurence at position : ' + v1)
+           }
+           for(i=0;i<email.length;i++){
+            if(email[i]=='.'){
+                k++;
+            }
+            else if(email[i]=='@'){
+                    d++;
+            }
+           }
+           document.write('<br>')
+           document.write('. occurence : ' + k)
+           document.write('<br>')
+           document.write('@ occurence : ' + d)
+        }
+        email()
+    </script>
+</body>
+</html>

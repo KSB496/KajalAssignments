@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+        a1 = document.querySelector('webs')
+        function disp(w1) {
+            a1 = document.querySelector('webs')
+            location.href = w1.options[w1.selectedIndex].text
+        }
+    </script>
+</head>
+
+<body>
+    <form name="f1">
+        <select name="webs" onchange="disp(this)">
+            <option value="1"> http://sparsh
+            <option value="2"> http://kshop
+            <option value="3"> http://172.21.20.155/
+            <option value="4"> http://enr.ad.Asreet.com/
+            <option value="5"> https://www.google.com
+            <option value="6"> https://www.w3schools.com/
+        </select>
+    </form>
+</body>
+
+</html>

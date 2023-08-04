@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="dateValidation.js"></script>
+    <script language="JavaScript">
+        function validateEmpDetails(){
+            isEmpty()
+        }
+        function isEmpty(){
+            //n1 = document.getElementById('empno').value
+            //n1 = document.getElementById('empname').value
+            n1 = document.getElementById('date').value
+            if(n1.length===0){
+                document.write('Employee number cant be empty ' + n1)
+                return 0
+            }
+            else{
+                onlySpaces()
+                //return 1
+            }
+        }
+        function onlySpaces(){
+            //n1 = document.getElementById('empno').value
+            //n1 = document.getElementById('empname').value
+            n1 = document.getElementById('date').value
+            //d=new Date(n1).getDate
+            if(n1.trim() == ''){
+                document.write('Employee number cannot have all characters as spaces ' + n1)
+                return 0
+            }
+            else{
+                //onlyDigits()
+                //onlyAlphabets()
+                dateValidate()
+                //return 1
+            }
+        }
+        function onlyDigits(){
+            n1 = document.getElementById('empno').value
+            if(isNaN(n1)){
+                document.write('Employee number cannot be digits only ' + n1)
+                return 0
+                
+            }
+            else{
+                 newwin=window.open('display.html','newone',"width=100;height=100;toolbar=no")
+                newwin.document.write('Successful Validation')
+            }
+        }
+        function onlyAlphabets(){
+            n1 = document.getElementById('empname').value
+            if((n1 >= 65 && n1<=90) || (n1>=97 && n1<=122)){
+                newwin=window.open('display.html','newone',"width=100;height=100;toolbar=no")
+               newwin.document.write('Successful validation') 
+               //return 1
+            }
+            else{
+                document.write('Employee name must be alphabets only ' + n1)
+                return 0
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="empform" onsubmit="return validateEmpDetails()">
+    Employee No:<input type="text" id="empno">
+    Employee Name:<input type="text" id="empname">
+    Date of Joining:<input type="text" id="date"> 
+    <input type="submit"  value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script language="JavaScript">
+        function asce(asceword) {
+          wordarr=asceword.split(' ')
+          document.write('<b>Original String:</b><br>')
+          for(i=0;i<wordarr.length;i++){
+                document.write(wordarr[i] + "<br>")
+           }
+          wordarr.sort()
+          document.write('<b>After Sorting:</b><br>')
+           for(i=0;i<wordarr.length;i++){
+                document.write(wordarr[i] + "<br>")
+           }
+        }
+        sent = 'javascript is very easy to learn'
+        asce(sent)
+    </script>
+</body>
+</html>

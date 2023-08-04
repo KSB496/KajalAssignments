@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>JavaScript Control demo</h3>
+    <script language="JavaScript">
+        function totalmark(secA, secB, secC) {
+            if (secA >= 25) {
+                if (secB >= 15) {
+                    if (secC >= 10) {
+                        totalmarks = secA + secB + secC
+                        if (totalmarks >= 65) {
+                            document.write('Congratulations!! You have passed the exam..')
+                        }
+                        else{
+                        document.write('you have failed the exam')
+                        }
+                    }
+                    else{
+                        document.write('you have score less than 50% in secC')
+                    }
+                }
+                else{
+                        document.write('you have score less than 50% in secB')
+                    }
+            }
+            else{
+                        document.write('you have score less than 50% in secA')
+                    }
+
+        }
+        totalmark(25,15,5)
+    </script>
+</body>
+
+</html>

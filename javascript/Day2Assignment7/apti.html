@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        h3{
+            color:red;
+        }
+    </style>
+    <script language="JavaScript">
+        function radDisplay(){
+            //var radval = document.form1.getElementsByName('rad')
+            
+            //document.write(radval.value)
+            const a=document.form1.rad.value
+                if(a=='Bill Clinton'){
+                    
+                    document.write('Answer is Correct')
+                }
+                else{
+                    
+                    document.write('Answer is Wrong')
+                }
+            }
+        
+    </script>
+</head>
+
+<body>
+    <form name="form1" >
+        <h3>Who is the owner of microsoft?</h3>
+        <input type="radio" name="rad" value="Bill Clinton">Bill Clinton
+        <input type="radio" name="rad" value="Bill gate">Bill gate
+        <input type="radio" name="rad" value="Mark Anderson">Mark Anderson
+        <input type="radio" name="rad" value="Tim Berners Lee">Tim Berners Lee<br>
+        <input type="button" value="Submit"  onclick="radDisplay()">
+    </form>
+</body>
+
+</html>

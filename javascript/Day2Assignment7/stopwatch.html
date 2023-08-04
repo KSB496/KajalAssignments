@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+        timer=document.getElementById('timer');
+        startbutton=document.getElementById('start1')
+         sec=0;
+         min=0;
+         hr=0;
+         sec=parseInt(sec)
+         min=parseInt(min)
+         hr=parseInt(hr)
+         /* function flag(){return true} */
+         flag=true
+        function start(){
+            if(flag){
+                document.getElementById('startbtn').disabled=true
+            }
+            flag=false
+            sec=parseInt(sec)
+         min=parseInt(min)
+         hr=parseInt(hr)
+                sec++
+            if(sec==60){
+                sec=0
+                min++ 
+            }
+            if(min==60){
+                min=0
+                hr++
+            }
+            if(sec<10){
+                sec = '0' + sec
+            }
+            if(min<10){
+                min = '0' + min
+            }
+
+            let hour=hr
+            let minutes=min
+            let seconds=sec
+            /* document.getElementById('time').innerHTML=hour
+            document.getElementById('time').innerHTML=minutes
+            document.getElementById('time').innerHTML=seconds */
+            document.getElementById('timer').innerHTML = hr + ':' + min + ':' + sec
+            id=setTimeout(start,1000)
+            
+        }
+        function stop() {
+            flag=true
+            if(flag){
+
+                document.getElementById('startbtn').disabled=false
+            }
+           
+           clearTimeout(id)
+           
+        }
+        
+    </script>
+</head>
+
+<body>
+    <form name="form1">
+        <h1>Stop Watch</h1>
+        <div id="timer">00:00:00</div><br>
+        <!-- <input type="text" id="timer"><br> -->
+        <input type="button" id="startbtn" value="Start" id="start1" onclick="start()" >
+        <input type="button" value="Stop"  onclick="stop()">
+        
+    </form>
+</body>
+
+</html>
